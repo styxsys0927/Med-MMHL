@@ -12,4 +12,4 @@ The data in "image_tweet" are for the task "multimodal tweets detection."
 
 For multimodal tasks, the paths to the images are stored in the column "image." The path looks like "/images/2023-05-09_fakenews/LeadStories/551_32.png" for news. You do not need to modify the path of the "images" folder in the root directory of your project.
 
-The content and images of tweets can be crawled with the code.
+The content and images of tweets can be crawled with the code collect_by_tweetid_tweepy_clean.py.
