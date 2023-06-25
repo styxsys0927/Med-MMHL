@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='fk_det_model text classificer')
 
 # data
 parser.add_argument('-root-path', type=str, default='./', help='the data directory')
-parser.add_argument('-dataset-type', type=str, default='sentence1', help='choose dataset to run [options: article, sentence, tweet]')
+parser.add_argument('-dataset-type', type=str, default='fakenews_article', help='choose dataset to run [options: fakenews_article, sentence, fakenews_tweet]')
 parser.add_argument('-shuffle', action='store_true', default=True, help='shuffle the data every epoch')
 parser.add_argument('-split-ratio', type=str, default='[0.7, 0.8, 1.0]', help='the split ratio of tr, dev, te sets')
 parser.add_argument('-benchmark-path', type=str, default='./benchmarked_data/', help='the benchmark data directory')
