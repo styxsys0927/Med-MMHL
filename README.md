@@ -21,16 +21,16 @@ Most of our baselines are drawn from Hugging Face[https://huggingface.co/], so y
 
 For example, to train a fine-tuned version of bioBERT, the command looks like this:
 
-Markup :  `code(python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article)`
+`python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article`
 
 To test an existing model, the command is:
 
-Markup :  `code(python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article -snapshot path/to/your/model -test)`
+`python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article -snapshot path/to/your/model -test`
 
 Similarly, to train and test a multimodal model, the commands are:
 
-Markup :  `code(python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article)`
+`python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article`
 
 and 
 
-Markup :  `code(python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article -snapshot path/to/your/model -test)`
+`python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article -snapshot path/to/your/model -test`
