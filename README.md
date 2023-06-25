@@ -17,7 +17,7 @@ The content and images of tweets can be crawled with the code collect_by_tweetid
 
 ## Running Baselines ##
 
-Most of our baselines are drawn from Hugging Face[https://huggingface.co/], so you need to provide the name of the models to make the code run.
+Most of our baselines are drawn from [Hugging Face](https://huggingface.co/), so you need to provide the name of the models to make the code run.
 
 For example, to train a fine-tuned version of bioBERT, the command looks like this:
 
