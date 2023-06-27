@@ -42,7 +42,9 @@ Most of our baselines are drawn from [Hugging Face](https://huggingface.co/), so
 | CLIP                | [openai/clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) |
 | VisualBERT          | [uclanlp/visualbert-vqa-coco-pre](https://huggingface.co/uclanlp/visualbert-vqa-coco-pre) |
 
-For example, to train a fine-tuned version of bioBERT, the command looks like this:
+Below are some examples of training and testing the Hugging Face models. Please refer to the code to explore more editable arguments. 
+
+To train a fine-tuned version of bioBERT, the command looks like this:
 
 ```shell
 python fake_news_detection_main.py \
