@@ -11,9 +11,9 @@ Below tables summarize the task and its source path, where the statistics is in 
 | --------------------------------- | ------------------- | -------------------------------------------- |
 | Fake news<br>detection            | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_article](https://drive.google.com/drive/folders/1UVnU57NOUbtxAX-tOzSIa6fPZiDtpWoc?usp=drive_link)                             |
 | LLM-generated fake sent detection | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [sentence](https://drive.google.com/drive/folders/15WI-FKK5B-SviSN2aEu5RQWg0gOtAsRX?usp=drive_link)                                     |
-| Multimodal fake news detection    | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | text: [fakenews_article]((https://drive.google.com/drive/folders/1UVnU57NOUbtxAX-tOzSIa6fPZiDtpWoc?usp=drive_link) ); image: [image_article](https://drive.google.com/drive/folders/1iuF9LaGG9Yz5wGsR7hBg4tPaR6WgZv64?usp=drive_link) |
+| Multimodal fake news detection    | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [image_article](https://drive.google.com/drive/folders/1iuF9LaGG9Yz5wGsR7hBg4tPaR6WgZv64?usp=drive_link) |
 | Fake tweet detection              | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_tweet](https://drive.google.com/drive/folders/1qoncX_CD4slkKU2Ylk12A8HiRy5R5b5A?usp=drive_link)                               |
-| Multimodal tweet detection        | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | text: [fakenews_tweet](https://drive.google.com/drive/folders/1qoncX_CD4slkKU2Ylk12A8HiRy5R5b5A?usp=drive_link); image: [image_tweet](https://drive.google.com/drive/folders/12__mlVW4gVoxh_mESB_g4EJofpjaZ2qh?usp=drive_link)   |
+| Multimodal tweet detection        | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [image_tweet](https://drive.google.com/drive/folders/12__mlVW4gVoxh_mESB_g4EJofpjaZ2qh?usp=drive_link)   |
 
 
 For multimodal tasks, the paths to the images are stored in the column ***image***. The path looks like */images/2023-05-09_fakenews/LeadStories/551_32.png* for news. You do not need to modify the path of the ***images*** folder in the root directory of your project.
@@ -21,11 +21,10 @@ For multimodal tasks, the paths to the images are stored in the column ***image*
 The content and images of tweets can be crawled with the code ***collect_by_tweetid_tweepy_clean.py*** or other legal twitter extraction tool given tweet IDs.
 
 ## Enviroment Configure ##
-(to do)
 
-> conda create -f our_env.yaml
+> conda create -f clip_env.yaml
 >
-> conda activate our_env
+> conda activate clip_env
 
 ## Running Baselines ##
 
