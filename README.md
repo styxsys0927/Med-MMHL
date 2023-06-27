@@ -29,7 +29,18 @@ The content and images of tweets can be crawled with the code ***collect_by_twee
 
 ## Running Baselines ##
 
-Most of our baselines are drawn from [Hugging Face](https://huggingface.co/), so you need to provide the name of the models to make the code run.
+Most of our baselines are drawn from [Hugging Face](https://huggingface.co/), so you need to provide the name of the models to make the code run. The Hugging Face models included in our baseline experiments are listed below.
+
+| Model Name          | Hugging Face Name                            |
+| ------------------- | -------------------------------------------- |
+| BERT                | [bert-base-cased](https://huggingface.co/bert-base-cased) |
+| BioBERT             | [pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb](https://huggingface.co/pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb) |
+| Funnel Transformer  | [funnel-transformer/medium-base](https://huggingface.co/funnel-transformer/medium-base) |
+| FN-BERT             | [ungjus/Fake_News_BERT_Classifier](https://huggingface.co/ungjus/Fake_News_BERT_Classifier) |
+| SentenceBERT        | [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) |
+| DistilBERT          | [sentence-transformers/msmarco-distilbert-base-tas-b](https://huggingface.co/sentence-transformers/msmarco-distilbert-base-tas-b) |
+| CLIP                | [openai/clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) |
+| VisualBERT          | [uclanlp/visualbert-vqa-coco-pre](https://huggingface.co/uclanlp/visualbert-vqa-coco-pre) |
 
 For example, to train a fine-tuned version of bioBERT, the command looks like this:
 
