@@ -1,19 +1,31 @@
 # Med-MMHL
-This is the repository of the dataset corresponding to the article "Med-MMHL: A Multi-Modal Dataset for Detecting Human- and
-LLM-Generated Misinformation in the Medical Domain." The data can be found at https://drive.google.com/drive/folders/1aB3c5CuPZ8hzcbUZFg6uE4MRlx-2jdk_?usp=sharing.
+This is the repository of the dataset corresponding to the article [Med-MMHL: A Multi-Modal Dataset for Detecting Human- and
+LLM-Generated Misinformation in the Medical Domain](https://arxiv.org/pdf/2306.08871.pdf). The data can be found at [here](https://drive.google.com/drive/folders/1aB3c5CuPZ8hzcbUZFg6uE4MRlx-2jdk_?usp=sharing).
 
 ## Dataset Description ##
 The data are already split into train/dev/test sets. 
 
-The data in "fakenews_article" are for the task "fake news detection."
-The data in "fakenews_tweet" are for the task "fake tweets detection."
-The data in "sentence" are for the task "LLM-generated fake sentence detection."
-The data in "image_article" are for the task "multimodal fake news detection."
-The data in "image_tweet" are for the task "multimodal tweets detection."
+Below tables summarize the task and its source path, where the statistics is in Tab 2 of our [paper](https://arxiv.org/pdf/2306.08871.pdf).
 
-For multimodal tasks, the paths to the images are stored in the column "image." The path looks like "/images/2023-05-09_fakenews/LeadStories/551_32.png" for news. You do not need to modify the path of the "images" folder in the root directory of your project.
+| Task                              | Benchmarked Results | Data Location                                |
+| --------------------------------- | ------------------- | -------------------------------------------- |
+| Fake news<br>detection            | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_article](https://drive.google.com/drive/folders/1UVnU57NOUbtxAX-tOzSIa6fPZiDtpWoc?usp=drive_link)                             |
+| LLM-generated fake sent detection | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [sentence](https://drive.google.com/drive/folders/15WI-FKK5B-SviSN2aEu5RQWg0gOtAsRX?usp=drive_link)                                     |
+| Multimodal fake news detection    | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | text: [fakenews_article]((https://drive.google.com/drive/folders/1UVnU57NOUbtxAX-tOzSIa6fPZiDtpWoc?usp=drive_link) ); image: [image_article](https://drive.google.com/drive/folders/1iuF9LaGG9Yz5wGsR7hBg4tPaR6WgZv64?usp=drive_link) |
+| Fake tweet detection              | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_tweet](https://drive.google.com/drive/folders/1qoncX_CD4slkKU2Ylk12A8HiRy5R5b5A?usp=drive_link)                               |
+| Multimodal tweet detection        | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | text: [fakenews_tweet](https://drive.google.com/drive/folders/1qoncX_CD4slkKU2Ylk12A8HiRy5R5b5A?usp=drive_link); image: [image_tweet](https://drive.google.com/drive/folders/12__mlVW4gVoxh_mESB_g4EJofpjaZ2qh?usp=drive_link)   |
 
-The content and images of tweets can be crawled with the code collect_by_tweetid_tweepy_clean.py.
+
+For multimodal tasks, the paths to the images are stored in the column ***image***. The path looks like */images/2023-05-09_fakenews/LeadStories/551_32.png* for news. You do not need to modify the path of the ***images*** folder in the root directory of your project.
+
+The content and images of tweets can be crawled with the code ***collect_by_tweetid_tweepy_clean.py*** or other legal twitter extraction tool given tweet IDs.
+
+## Enviroment Configure ##
+(to do)
+
+> conda create -f our_env.yaml
+>
+> conda activate our_env
 
 ## Running Baselines ##
 
@@ -21,16 +33,48 @@ Most of our baselines are drawn from [Hugging Face](https://huggingface.co/), so
 
 For example, to train a fine-tuned version of bioBERT, the command looks like this:
 
-`python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article`
+```shell
+python fake_news_detection_main.py \
+    -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb \
+    -device 0 \
+    -batch-size 4 \
+    -benchmark-path path/to/your/data \
+    -dataset-type fakenews_article
+```
 
 To test an existing model, the command is:
 
-`python fake_news_detection_main.py -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type fakenews_article -snapshot path/to/your/model -test`
+```shell
+python fake_news_detection_main.py \
+    -bert-type pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb \
+    -device 0 \
+    -batch-size 4 \
+    -benchmark-path path/to/your/data \
+    -dataset-type fakenews_article \
+    -snapshot path/to/your/model \
+    -test
+```
 
 Similarly, to train and test a multimodal model, the commands are:
 
-`python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article`
+```shell
+python fake_news_detection_multimodal_main.py \
+    -clip-type uclanlp/visualbert-vqa-coco-pre \
+    -device 0 \
+    -batch-size 4 \
+    -benchmark-path path/to/your/data \
+    -dataset-type image_article
+```
 
 and 
 
-`python fake_news_detection_multimodal_main.py -clip-type uclanlp/visualbert-vqa-coco-pre -device 0 -batch-size 4 -benchmark-path path/to/your/data -dataset-type image_article -snapshot path/to/your/model -test`
+```shell
+python fake_news_detection_multimodal_main.py \
+    -clip-type uclanlp/visualbert-vqa-coco-pre \
+    -device 0 \
+    -batch-size 4 \
+    -benchmark-path path/to/your/data \
+    -dataset-type image_article \
+    -snapshot path/to/your/model \
+    -test
+```
