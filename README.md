@@ -99,8 +99,6 @@ If you find the dataset is helpful, please cite
   journal={arXiv preprint arXiv:2306.08871},
   year={2023}
 }```
-
 or
-
-or ```Sun, Yanshen, et al. "Med-MMHL: A Multi-Modal Dataset for Detecting Human-and LLM-Generated Misinformation in the Medical Domain." arXiv preprint arXiv:2306.08871 (2023).```
+ ```Sun, Yanshen, et al. "Med-MMHL: A Multi-Modal Dataset for Detecting Human-and LLM-Generated Misinformation in the Medical Domain." arXiv preprint arXiv:2306.08871 (2023).```
 
