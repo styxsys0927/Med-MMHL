@@ -90,3 +90,17 @@ python fake_news_detection_multimodal_main.py \
     -snapshot path/to/your/model \
     -test
 ```
+
+If you find the dataset is helpful, please cite
+
+```@article{sun2023med,
+  title={Med-MMHL: A Multi-Modal Dataset for Detecting Human-and LLM-Generated Misinformation in the Medical Domain},
+  author={Sun, Yanshen and He, Jianfeng and Lei, Shuo and Cui, Limeng and Lu, Chang-Tien},
+  journal={arXiv preprint arXiv:2306.08871},
+  year={2023}
+}```
+
+or
+
+or ```Sun, Yanshen, et al. "Med-MMHL: A Multi-Modal Dataset for Detecting Human-and LLM-Generated Misinformation in the Medical Domain." arXiv preprint arXiv:2306.08871 (2023).```
+
