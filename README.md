@@ -1,6 +1,6 @@
 # Med-MMHL
 This is the repository of the dataset corresponding to the article [Med-MMHL: A Multi-Modal Dataset for Detecting Human- and
-LLM-Generated Misinformation in the Medical Domain](https://arxiv.org/pdf/2306.08871.pdf). The data can be found at [here]([https://drive.google.com/drive/folders/1aB3c5CuPZ8hzcbUZFg6uE4MRlx-2jdk_?usp=sharing](https://www.dropbox.com/scl/fo/zvud6ta0uaqm2j1liupts/h?rlkey=zhychubvhspdxramyjdqjteqd&dl=0)).
+LLM-Generated Misinformation in the Medical Domain](https://arxiv.org/pdf/2306.08871.pdf). The data can be found at [here](https://www.dropbox.com/scl/fo/zvud6ta0uaqm2j1liupts/h?rlkey=zhychubvhspdxramyjdqjteqd&dl=0).
 
 ## Dataset Description ##
 The data are already split into train/dev/test sets. 
