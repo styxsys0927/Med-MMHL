@@ -1,19 +1,19 @@
 # Med-MMHL
 This is the repository of the dataset corresponding to the article [Med-MMHL: A Multi-Modal Dataset for Detecting Human- and
-LLM-Generated Misinformation in the Medical Domain](https://arxiv.org/pdf/2306.08871.pdf). The data can be found at [here](https://drive.google.com/drive/folders/1aB3c5CuPZ8hzcbUZFg6uE4MRlx-2jdk_?usp=sharing).
+LLM-Generated Misinformation in the Medical Domain](https://arxiv.org/pdf/2306.08871.pdf). The data can be found at [here]([https://drive.google.com/drive/folders/1aB3c5CuPZ8hzcbUZFg6uE4MRlx-2jdk_?usp=sharing](https://www.dropbox.com/scl/fo/zvud6ta0uaqm2j1liupts/h?rlkey=zhychubvhspdxramyjdqjteqd&dl=0)).
 
 ## Dataset Description ##
 The data are already split into train/dev/test sets. 
 
-Below tables summarize the task and its source path, where the statistics is in Tab 2 of our [paper](https://arxiv.org/pdf/2306.08871.pdf).
+Below tables summarize the task and its source path, where the statistics are in Tab 2 of our [paper](https://arxiv.org/pdf/2306.08871.pdf).
 
 | Task                              | Benchmarked Results | Data Location                                |
 | --------------------------------- | ------------------- | -------------------------------------------- |
-| Fake news<br>detection            | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_article](https://drive.google.com/drive/folders/1UVnU57NOUbtxAX-tOzSIa6fPZiDtpWoc?usp=drive_link)                             |
-| LLM-generated fake sent detection | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [sentence](https://drive.google.com/drive/folders/15WI-FKK5B-SviSN2aEu5RQWg0gOtAsRX?usp=drive_link)                                     |
-| Multimodal fake news detection    | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [image_article](https://drive.google.com/drive/folders/1iuF9LaGG9Yz5wGsR7hBg4tPaR6WgZv64?usp=drive_link) |
-| Fake tweet detection              | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [fakenews_tweet](https://drive.google.com/drive/folders/1qoncX_CD4slkKU2Ylk12A8HiRy5R5b5A?usp=drive_link)                               |
-| Multimodal tweet detection        | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | [image_tweet](https://drive.google.com/drive/folders/12__mlVW4gVoxh_mESB_g4EJofpjaZ2qh?usp=drive_link)   |
+| Fake news<br>detection            | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | fakenews_article                             |
+| LLM-generated fake sent detection | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | sentence                                     |
+| Multimodal fake news detection    | Tab 3 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | image_article |
+| Fake tweet detection              | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | fakenews_tweet                               |
+| Multimodal tweet detection        | Tab 4 in [paper](https://arxiv.org/pdf/2306.08871.pdf)      | image_tweet   |
 
 
 For multimodal tasks, the paths to the images are stored in the column ***image***. The path looks like */images/2023-05-09_fakenews/LeadStories/551_32.png* for news. You do not need to modify the path of the ***images*** folder in the root directory of your project.
